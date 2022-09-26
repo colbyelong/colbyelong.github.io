@@ -1,0 +1,270 @@
+
+/* 
+	This special-use CSS supplements the standard 
+	math CSS.
+*/
+
+
+h2.grouplist {
+	font-size: 110%;
+	border-bottom: 2px #036 solid;
+	clear: both;
+}
+
+h2.staffPage {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-bottom: 1px black solid;
+}
+
+
+table.people {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	border: 1px black solid;
+}
+
+table.people td {
+	padding: 5px;
+	margin: 3px;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+table.people th {
+	padding: 5px;
+	text-align: center;
+}
+
+
+div.color1 {
+	background-color: #CCC;
+/*	border-left: 1px black solid;*/
+	border-right: 1px #333 solid; 
+	border-bottom: 1px #333 solid;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px
+}
+
+
+div.color2 {
+	background-color: #CA7;
+/*	border-right: 1px #CCC solid;
+	border-left: 1px #CCC solid; */
+	border-right: 1px #333 solid;
+	border-bottom: 1px #333 solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+p.peopleHeading {
+	font-size: 1.5em;
+/*	font-style: bold;	*/
+	border-bottom: 1px solid black;
+	margin-top: 40px;
+}
+
+div.personBlock {
+	border: 1px #999 solid;
+	background-color: #EEE;
+	margin-bottom: 4.5px;
+}
+
+ul.faclistDetail {
+	/*background-color: green;*/
+	background: transparent;
+	margin: 0 0 0 -20px;
+	list-style-type: none;
+	margin-bottom: 10px;
+	list-style-type: none;
+	padding-left: 50px;
+}
+
+li.faclistDetail {
+	background: transparent;
+	font-size: .9em;
+}
+
+span.faclistLinks {
+	font-size: .9em;
+	margin-left: 5px;
+}
+
+span.faclistTitle {
+	font-size: .98em;
+	margin-left: 10px;
+	line-height: 1em;
+}
+
+span.faclistName {
+	font-size: 1.10em;
+/*	text-decoration: bold;		*/
+}
+
+
+table.swlist {
+	font-size: smaller;
+	background-color: #fff;
+}
+table.swlist tr {
+	background-color: #eef;
+}
+table.swlist tr.alt {
+	background-color: #fff;
+}
+table.swlist tr.alt td.solaris-i386 {
+	background-color: #D3DEEB;
+}
+table.swlist tr.alt td.solaris-sparc {
+	background-color: #DfD0E0;
+}
+table.swlist tr.alt td.solaris-x86_64 {
+	background-color: #D3DEFF;
+}
+table.swlist tr.alt td.linux-x86_64 {
+	background-color: #FFE523;
+}
+table.swlist tr.alt td.macosx-i386 {
+	background-color: #5A95E4;
+}
+table.swlist tr.alt td.macosx-ppc {
+	background-color: #7CbEf3
+}
+table.swlist tr.alt td.macosx-universal {
+	background-color: #9DeCAb;
+}
+
+ul.quicklinks {
+	display: block;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	font-weight: normal;
+	/*font-size: .9em;*/
+	line-height:1.4em;
+	margin: 0 0.5em 1em 2em;
+	padding: 0px;
+	float: right;
+	list-style-type: none;
+	width: 24%;
+}
+ul.quicklinks li {
+	font-size: .9em;
+	border-bottom: 1px solid #B1946C;
+	border-left: 1px solid #B1946C;
+	border-right: 1px solid #B1946C;
+	padding: 3px;
+	line-height: 1.2em;
+}
+ul.quicklinks li.qlheader {
+	border: 1px solid #B1946C;
+	padding: 3px;
+	background-color: #E0D5C5;
+}
+ul.quicklinks p {
+	font-size: 1em;
+}
+ul.quicklinks select {
+	1em;
+}
+
+#doc_container {
+	/* background: none;
+	background-color: white; */
+}
+
+#middle {
+	/* width: 974px; */
+}
+
+
+h1#bioname {
+	/* font-size: larger; */
+}
+ul#biodetails {
+	list-style-type: none;
+	font-weight: bold;
+}
+ul#biodetails li .detail{
+	 /*font-size: 0.9em;  */
+	margin-left: 0.8em;
+	font-weight: normal;
+}
+
+.facpic { 
+	background-color: #fff; 
+	margin-top: 0; 
+	text-align: center; 
+	padding: 0px; 
+	margin-right: 30px; 
+	margin-bottom: 0px; 
+	float: left; 
+	margin-left: 0px; 
+	font-size: x-small;
+} 
+
+
+
+
+.minicontainer { 
+	padding-bottom: 10px; 
+	margin: 10px 0 20px 20px; 
+	/* clear: left; */
+} 
+#minitabs { 
+	padding: 0;
+	margin: 0;
+} 
+#minitabs-bottom { 
+	margin: 0 0 0 0;
+	padding: 2em 0 0 0;
+} 
+
+#minitabs li, #minitabs-bottom li { 
+		margin: 0; 
+		padding: 0; 
+		display: inline; 
+		list-style-type: none; 
+} 
+#minitabs a:link, #minitabs a:visited,
+#minitabs-bottom a:link, #minitabs-bottom a:visited
+{ 
+	font-size: .86em; 
+	line-height: 14px; 
+	font-weight: normal; 
+	margin: 0 10px 4px 0px; 
+	text-decoration: none; 
+} 
+#minitabs a.active:link, 
+	#minitabs a.active:visited, 
+	#minitabs a:hover,
+#minitabs-bottom a.active:link, 
+	#minitabs-bottom a.active:visited, 
+	#minitabs-bottom a:hover
+{ 
+	background: #fff; 
+	color: #555; 
+}
+
+.minicontainer a {
+	border-bottom: none;
+}
+
+div.info:after {
+	content: ".";
+	clear: both;
+	display: block;
+}
+
+p.bioparagraph {
+	padding-top: 2em;
+	clear: left;
+}
+
+#middle .main h1 {
+	/* font-size: 2em; */
+}
