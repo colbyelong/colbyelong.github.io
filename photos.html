@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colby Long | Photos</title>
+  <style>
+    :root {
+      --text: #252525;
+      --muted: #5f6368;
+      --accent: #315f7d;
+      --accent-dark: #23485f;
+      --background: #ffffff;
+      --surface: #f5f7f8;
+      --border: #dfe3e6;
+      --max-width: 1050px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-dark); }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      padding: .5rem .75rem;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, .97);
+    }
+
+    .site-header {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.35rem 1.5rem 1.15rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .site-title {
+      margin: 0;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1.25rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .92rem;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4.5rem;
+    }
+
+    .page-intro {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 .7rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.65rem);
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    .page-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 3.8rem;
+    }
+
+    .gallery-item {
+      margin: 0;
+      padding: 0 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .gallery-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .photo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      min-height: 280px;
+      padding: 1.25rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .photo-row img {
+      display: block;
+      width: auto;
+      height: 290px;
+      max-width: calc(50% - .75rem);
+      object-fit: contain;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+      background: white;
+    }
+
+    .gallery-item figcaption {
+      max-width: 780px;
+      margin: 1.15rem auto 0;
+      padding: 0 .75rem;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .photo-row.three {
+      gap: 1.25rem;
+    }
+
+    .photo-row.three img {
+      height: 270px;
+      max-width: calc(33.333% - .85rem);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .site-footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .8rem;
+      }
+
+      nav ul { justify-content: flex-start; }
+
+      main { padding-top: 2.75rem; }
+
+      .photo-row,
+      .photo-row.three {
+        min-height: 0;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+      }
+
+      .photo-row img,
+      .photo-row.three img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 360px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .site-header,
+      main,
+      .site-footer { padding-left: 1rem; padding-right: 1rem; }
+
+      .gallery { gap: 2.8rem; }
+
+      .gallery-item { padding-bottom: 2.7rem; }
+
+      .gallery-item figcaption { font-size: .96rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <div class="site-header">
+      <p class="site-title">Colby Long</p>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Research.html">Research</a></li>
+          <li><a href="CV_ColbyLong.pdf">CV</a></li>
+          <li><a href="AboutMe.html">About Me</a></li>
+          <li><a href="photos.html" aria-current="page">Photos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1>Photos</h1>
+      <p></p>
+    </section>
+
+    <section class="gallery" aria-label="Photo gallery">
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/navy1.jpg" alt="Colby Long at Naval Nuclear Power School graduation">
+          <img src="images/navy3.jpg" alt="Passing through the Suez Canal">
+        </div>
+        <figcaption>Graduation from Naval Nuclear Power School and passing through the Suez Canal.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/AT3.jpg" alt="Appalachian Trail section hike">
+          <img src="images/AT4.jpg" alt="Appalachian Trail section hike">
+        </div>
+        <figcaption>Section hikes on the Appalachian Trail back in summer 2004 (MD-PA and NH-ME) --pretty sure the date on my camera was always wrong.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/skagway1.jpg" alt="Skagway, Alaska">
+          <img src="images/skagway3.jpg" alt="Skagway, Alaska">
+        </div>
+        <figcaption>Summer spent barista-ing in Skagway, Alaska.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/stmarys3.jpg" alt="St. Mary's College of Maryland">
+          <img src="images/stmarys1.jpg" alt="St. Mary's College of Maryland">
+        </div>
+        <figcaption>St. Mary's College of Maryland.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/spain1.jpg" alt="The Pyrenees near Graus and Visalibons, Spain">
+          <img src="images/spain2.jpg" alt="The Pyrenees near Graus and Visalibons, Spain">
+        </div>
+        <figcaption>The Pyrenees--Graus and Visalibons, Spain.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/korea3.jpg" alt="Gyeongbokgung Palace in Seoul, South Korea">
+          <img src="images/korea2.jpg" alt="Beach ultimate in Busan, South Korea">
+        </div>
+        <figcaption>Gyeongbokgung Palace in Seoul and beach ultimate in Busan, South Korea.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/raleigh.jpg" alt="City of Oaks Marathon">
+          <img src="images/ravens2.jpg" alt="Ravens game">
+        </div>
+        <figcaption>City of Oaks Marathon and Ravens game!</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/keeri1.jpg" alt="Pre-wedding hike in Mount Hood, Oregon">
+          <img src="images/grandcanyon2.jpg" alt="Hiking at the Grand Canyon">
+        </div>
+        <figcaption>Pre-wedding hike in Mt. Hood, Oregon and hiking with the in-laws at the Grand Canyon.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row">
+          <img src="images/barcelona1.jpg" alt="Camp Nou in Barcelona">
+          <img src="images/florence.jpg" alt="Florence, Italy">
+        </div>
+        <figcaption>Camp Nou in Barcelona and Florence, Italy.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <div class="photo-row three">
+          <img src="images/furmat2.jpg" alt="Pierre de Furmat">
+          <img src="images/cats.jpg" alt="Charleston">
+          <img src="images/cat2.jpg" alt="Cat photograph">
+        </div>
+        <figcaption>Pierre de Furmat and Charleston.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <div class="site-footer">&copy; Colby Long</div>
+  </footer>
+</body>
+</html>
